@@ -36,7 +36,7 @@ Se habilita la auditoría de eventos de inicio de sesión mediante políticas lo
 
 Se verifica la conectividad entre sistemas y el correcto funcionamiento del entorno.
 
-![Auditoría de logon](./screens/LAB1_05_Auditoria_Logon_Config.png)
+![Auditoría de logon](./Screenshots/LAB1_05_Auditoria_Logon_Config.png)
 
 ---
 
@@ -46,7 +46,7 @@ Se generan múltiples intentos fallidos de autenticación sobre el usuario de do
 
 Esta secuencia es clave para identificar un posible compromiso de credenciales:
 
-![Secuencia de intentos de login](./screens/LAB1_07_Login_Attempt_Sequence.png)
+![Secuencia de intentos de login](./Screenshots/LAB1_07_Login_Attempt_Sequence.png)
 
 Una vez dentro del sistema, se realizan acciones básicas de enumeración:
 
@@ -54,13 +54,13 @@ Identificación del usuario (whoami)
 Enumeración de usuarios y grupos  
 Identificación del hostname  
 
-![Reconocimiento en el sistema](./screens/LAB1_11_PostLogin_Hostname.png)
+![Reconocimiento en el sistema](./Screenshots/LAB1_11_PostLogin_Hostname.png)
 
 Posteriormente, se establece persistencia mediante la creación de una tarea programada.
 
 Debido a limitaciones de permisos del usuario comprometido, la persistencia se crea con privilegios administrativos, lo que indica la necesidad de privilegios elevados para mantener el acceso en el sistema.
 
-![Tarea persistente creada](./screens/LAB1_15_Persistencia_Tarea_Listada.png)
+![Tarea persistente creada](./Screenshots/LAB1_15_Persistencia_Tarea_Listada.png)
 
 ---
 
@@ -68,7 +68,7 @@ Debido a limitaciones de permisos del usuario comprometido, la persistencia se c
 
 El equipo SOC accede remotamente al endpoint comprometido mediante Escritorio Remoto.
 
-![Acceso RDP desde SOC](./screens/LAB1_19_RDP_Sesion_Establecida_SOC_a_IAM.png)
+![Acceso RDP desde SOC](./Screenshots/LAB1_19_RDP_Sesion_Establecida_SOC_a_IAM.png)
 
 Durante el análisis:
 
@@ -79,7 +79,7 @@ Múltiples 4625 (intentos fallidos)
 
 Esto confirma un posible compromiso de credenciales.
 
-![Análisis de eventos de logon](./screens/LAB1_20_Logon_Analisis_SOC.png)
+![Análisis de eventos de logon](./Screenshots/LAB1_20_Logon_Analisis_SOC.png)
 
 Posteriormente, se analiza el registro de tareas programadas (TaskScheduler/Operational), filtrando eventos:
 
@@ -88,7 +88,7 @@ Posteriormente, se analiza el registro de tareas programadas (TaskScheduler/Oper
 
 Se identifica una tarea sospechosa (UpdateService) asociada a persistencia en el sistema.
 
-![Eventos de Task Scheduler](./screens/LAB1_21_Persistencia_Log_TaskScheduler.png)
+![Eventos de Task Scheduler](./Screenshots/LAB1_21_Persistencia_Log_TaskScheduler.png)
 
 ---
 
@@ -98,11 +98,11 @@ Una vez confirmada la persistencia:
 
 Se elimina la tarea programada maliciosa:
 
-![Eliminación de persistencia](./screens/LAB1_22_Persistencia_Tarea_Eliminada.png)
+![Eliminación de persistencia](./Screenshots/LAB1_22_Persistencia_Tarea_Eliminada.png)
 
 Se restablece la contraseña del usuario comprometido desde Active Directory:
 
-![Reset de contraseña](./screens/LAB1_23_AD_Reset_Password_User.png)
+![Reset de contraseña](./Screenshots/LAB1_23_AD_Reset_Password_User.png)
 
 No se fuerza el cambio de contraseña en el siguiente inicio de sesión para evitar que un posible atacante con acceso activo pueda modificar las credenciales y mantener el control de la cuenta.
 
@@ -173,7 +173,7 @@ The SOC detects suspicious activity and starts investigation and containment.
 
 Logon auditing is enabled:
 
-![Logon auditing](./screens/LAB1_05_Auditoria_Logon_Config.png)
+![Logon auditing](./Screenshots/LAB1_05_Auditoria_Logon_Config.png)
 
 ---
 
@@ -181,15 +181,15 @@ Logon auditing is enabled:
 
 Multiple failed logon attempts followed by a successful one:
 
-![Login attempts](./screens/LAB1_07_Login_Attempt_Sequence.png)
+![Login attempts](./Screenshots/LAB1_07_Login_Attempt_Sequence.png)
 
 Basic reconnaissance:
 
-![System enumeration](./screens/LAB1_11_PostLogin_Hostname.png)
+![System enumeration](./Screenshots/LAB1_11_PostLogin_Hostname.png)
 
 Persistence via scheduled task:
 
-![Persistence task](./screens/LAB1_15_Persistencia_Tarea_Listada.png)
+![Persistence task](./Screenshots/LAB1_15_Persistencia_Tarea_Listada.png)
 
 ---
 
@@ -197,15 +197,15 @@ Persistence via scheduled task:
 
 SOC connects via RDP:
 
-![RDP access](./screens/LAB1_19_RDP_Sesion_Establecida_SOC_a_IAM.png)
+![RDP access](./Screenshots/LAB1_19_RDP_Sesion_Establecida_SOC_a_IAM.png)
 
 Log analysis confirms compromise:
 
-![Logon analysis](./screens/LAB1_20_Logon_Analisis_SOC.png)
+![Logon analysis](./Screenshots/LAB1_20_Logon_Analisis_SOC.png)
 
 Task Scheduler analysis:
 
-![Task scheduler logs](./screens/LAB1_21_Persistencia_Log_TaskScheduler.png)
+![Task scheduler logs](./Screenshots/LAB1_21_Persistencia_Log_TaskScheduler.png)
 
 ---
 
@@ -213,11 +213,11 @@ Task Scheduler analysis:
 
 Task removed:
 
-![Task removed](./screens/LAB1_22_Persistencia_Tarea_Eliminada.png)
+![Task removed](./Screenshots/LAB1_22_Persistencia_Tarea_Eliminada.png)
 
 Password reset:
 
-![Password reset](./screens/LAB1_23_AD_Reset_Password_User.png)
+![Password reset](./Screenshots/LAB1_23_AD_Reset_Password_User.png)
 
 ---
 
