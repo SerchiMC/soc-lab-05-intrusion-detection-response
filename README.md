@@ -141,6 +141,21 @@ Acciones de contención
 
 ---
 
+## 10. Evidencia completa (Extendida)
+
+Todas las capturas generadas durante el laboratorio están disponibles en el directorio `/screens`.
+
+Incluyen pasos adicionales como:
+
+- Comandos de enumeración detallados  
+- Configuraciones intermedias del Task Scheduler  
+- Preparación y validación del acceso RDP  
+- Salidas adicionales del sistema  
+
+Esta sección no se muestra completamente en el README para mantener la claridad y la legibilidad del documento.
+
+---
+
 # ENGLISH VERSION
 
 ## 1. Introduction
@@ -223,4 +238,41 @@ Password reset:
 
 ## 8. Conclusions
 
-This lab shows how a simple attack evolves into persistence and how it can be detected and contained using native tools.
+This lab shows how a simple attack can evolve from failed authentication attempts to persistence within the system.
+
+It highlights the importance of:
+
+Security event monitoring  
+Activity correlation  
+Persistence identification  
+Application of containment measures  
+
+The use of native tools helps build a solid understanding of Windows internals and provides a strong foundation for SOC analysis tasks.
+
+---
+
+## 9. Evidence
+
+The screenshots included in this repository show:
+
+Environment configuration  
+Authentication sequence  
+Attacker actions  
+SOC access to the system  
+Persistence detection  
+Containment actions  
+
+---
+
+## 10. Full Evidence (Extended)
+
+All screenshots generated during the lab are available in the `/screens` directory.
+
+These include additional steps such as:
+
+- Detailed enumeration commands  
+- Intermediate Task Scheduler configurations  
+- RDP setup and access validation  
+- Additional system outputs  
+
+This section is intentionally not fully displayed in the README to maintain clarity and readability.
