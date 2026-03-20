@@ -79,7 +79,7 @@ Múltiples 4625 (intentos fallidos)
 
 Esto confirma un posible compromiso de credenciales.
 
-![Análisis de eventos de logon](./Screenshots/LAB1_20_Logon_Analisis_SOC.png)
+![Análisis de eventos de logon](./Screenshots/LAB1_20_Logon_Events_Analisis_SOC.png)
 
 Posteriormente, se analiza el registro de tareas programadas (TaskScheduler/Operational), filtrando eventos:
 
