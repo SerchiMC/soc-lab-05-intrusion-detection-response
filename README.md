@@ -201,7 +201,7 @@ SOC connects via RDP:
 
 Log analysis confirms compromise:
 
-![Logon analysis](./Screenshots/LAB1_20_Logon_Analisis_SOC.png)
+![Logon analysis](./Screenshots/LAB1_20_Logon_Events_Analisis_SOC.png)
 
 Task Scheduler analysis:
 
